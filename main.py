@@ -6,12 +6,9 @@ def is_alphabet_or_space(char): # функция возвращает true, ес
     return str.isalpha(char) or char == " "
 
 
-def split(my_str):  # возвращает список слов
-    # filter принимает 1 - функцию, по которому мы выбираем, какие обьекты нам подходят (если true - подходит)
-    # 2 - к чему мы будем принимать 1 функцию
-    # затем мы соединяем результаты фильтрации в строку
-    my_str = ''.join(filter(is_alphabet_or_space, my_str))
-    my_str = my_str.lower()
+def split(my_str):  # функция возвращает список слов
+    my_str = ''.join(filter(is_alphabet_or_space, my_str)) # filter принимает 1 - функцию, по которому мы выбираем, какие обьекты нам подходят (если true - подходит), 2 - к чему мы будем принимать 1 функцию
+    my_str = my_str.lower() # затем мы соединяем результаты фильтрации в строку
     my_words = my_str.split()
     return my_words
 
